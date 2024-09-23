@@ -56,7 +56,7 @@ class ModelTrainer:
                 obj=best_model
             )
 
-            return model_report
+            return best_model_name,best_model_score
 
 
 

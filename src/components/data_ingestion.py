@@ -59,3 +59,4 @@ if __name__ == "__main__":
 
     ModelTrainer = ModelTrainer()
     print(ModelTrainer.intiate_model_trainer(train_arr, test_arr))
+    

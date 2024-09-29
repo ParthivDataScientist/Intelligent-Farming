@@ -34,12 +34,10 @@ class ModelTrainer:
             
             #MODELS 
             models ={
-                "Random Forest Classifier" : RandomForestClassifier(),
-                "Decision tree Classifier" : DecisionTreeClassifier(),
-                "KNeighborsClassifier" : KNeighborsClassifier()
+                "Random Forest Classifier" : RandomForestClassifier()
             }
-
-            model_report: dict = evaluate_models(X_train=X_train, y_train=y_train, X_test = X_test, y_test=y_test, models=models)
+            model_report: dict = evaluate_models(X_train=X_train, y_train=y_train, X_test = X_test, y_test=y_test,
+                                                models=models)
 
             #BEST model score
             best_model_score = max(sorted(model_report.values()))

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-AI</title>
+</head>
+<body>
+    <form action="{{url_for('predict_datapoint')}}" method="post">
+        <div class="row">
+
+            <div class="col-md-4">
+                <label for="Nitrogen">Nitrogen:</label>
+                <input type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter Number">
+            </div><br>
+
+            <div class="col-md-4">
+                <label for="Phosphorus">Phosphorus:</label>
+                <input type="number" id="Phosphorus" name="Phosphorus" placeholder="Enter Number">
+            </div><br>
+
+            <div class="col-md-4">
+                <label for="Potassium">Potassium:</label>
+                <input type="number" id="Potassium" name="Potassium" placeholder="Enter Number">
+            </div><br>
+
+            <div class="col-md-4">
+                <label for="Temperature">Temperature:</label>
+                <input type="Temperature" id="Temperature" name="Temperature" placeholder="Enter Number">
+            </div><br>
+
+            <div class="col-md-4">
+                <label for="Humidity">Humidity:</label>
+                <input type="Humidity" id="Humidity" name="Humidity" placeholder="Enter Number">
+            </div><br>
+
+            <div class="col-md-4">
+                <label for="pH_Value">pH_Value:</label>
+                <input type="pH_Value" id="pH_Value" name="pH_Value" placeholder="Enter Number" min="0" max="7">
+            </div><br>
+
+            <div class="col-md-4">
+                <label for="Rainfall">Rainfalle:</label>
+                <input type="Rainfall" id="Rainfall" name="Rainfall" placeholder="Enter Number">
+            </div>
+
+            <div class="col-md-12">
+                <button type="submit" class="subit button">Get Recommendation</button>
+            </div>
+
+        </div>
+
+    </form>
+    <h2> The prediction is {{results}}</h2>
+</body>
+</html>
